@@ -12,3 +12,6 @@ define('DB_NAME', 'share_posts');
 define('URLROOT' , 'http://localhost/shareposts');
 //SITE NAME
 define('SITENAME', 'sharePosts');
+
+//APP VERSION
+define('APPVERSION' , '1.0.0');
