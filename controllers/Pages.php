@@ -4,6 +4,11 @@
     }
 
     public function index(){
+
+      if(isLoggedIn()){
+        redirect('posts');
+      }
+
       $data = [
         'title' => 'SHARE POSTS',
         'discription' => 'simple social network built on the zain MVC php framework'
