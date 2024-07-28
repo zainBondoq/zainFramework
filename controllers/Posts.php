@@ -5,12 +5,16 @@ public function __construct() {
     if(!isLoggedIn()){
         redirect('/users/login');
     }
+    $this->postModel = $this->model('Post');
 }
 
 
 
     public function index(){
-        $data = [];
+        $posts = $this->postModel->getPosts();
+        $data = [
+            'posts' => $posts
+        ];
 
         $this->view('posts/index' , $data);
     }
